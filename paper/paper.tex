@@ -105,7 +105,7 @@ The preprocessed-input attention can be recovered to error at most $n^{-10}/16$ 
 There are $2\binom{g+3}{3}=\poly(\log n)$ moment coordinates. Weights, coefficients, and all reconstruction intermediates have $O(\log^2 n)$ bits, and reconstruction costs $\poly(\log n)$ word operations per query.
 \end{lemma}
 
-Here $\N=\{0,1,\ldots\}$ and $\kappa^\alpha=\prod_{a=1}^3\kappa_a^{\alpha_a}$. The proof in Appendix~\ref{app:numerics} approximates $e^{-z}$ on $[0,7T]$ and evaluates the resulting polynomial exactly. In particular, cancellation in monomial coordinates entails a bit cost, not a stability assumption.
+Here $\N=\{0,1,\ldots\}$ and $\kappa^\alpha=\prod_{a=1}^3\kappa_a^{\alpha_a}$. The proof in Appendix~\ref{app:numerics} approximates $e^{-z}$ on $[0,7T]$ and evaluates the resulting polynomial exactly. In particular, cancellation in monomial coordinates costs extra bits and requires no stability assumption.
 
 \section{Local summaries in a sampled normal cone}\label{sec:frames}
 Let $K$ be a current list of $p$ keys, and let $S\subseteq K$ have a full-dimensional simplicial hull. Let $o$ be the centroid of four affinely independent sampled keys, and write each sampled facet inequality as
@@ -185,7 +185,7 @@ For every query in this frame and bin,
  \{k\in G_F:h-\ip qk\le T\}\subseteq A_{F,b}
        \subseteq\{k\in G_F:h-\ip qk\le6T\}.
 \]
-The set contains $v$ and depends on the frame and bin, not on the individual query. All required moment vectors for a query list $Q$ in a fixed frame can be computed in $(p+|Q|)\poly(L,\log n)$ word operations.
+The set contains $v$ and depends only on the frame and bin. All required moment vectors for a query list $Q$ in a fixed frame can be computed in $(p+|Q|)\poly(L,\log n)$ word operations.
 \end{lemma}
 \begin{proof}
 If the sum in~\eqref{eq:nonnegative} is at most $T$, every nonnegative summand is at most $T$, and $b_a z_a\le\lambda_a z_a\le T$. Conversely, a selected key has $\lambda_a z_a<2T$ for each positive coefficient and zero contribution from each zero coefficient. Its total deficit is at most $6T$. At $v$ all three slacks vanish.
@@ -305,7 +305,7 @@ dominates the expected operation count for every $n\ge2$. Its integer counter ha
 \section{Scope and remaining questions}\label{sec:scope}
 The proof uses the linear face complexity of three-dimensional hulls twice: to bound expected facet conflicts and to bound the number of frames. A fan triangulation from one polar vertex can repeat a facet in many frames. Alternating ears prevents this duplication and gives the sharper $n\,2^{O(\sqrt{\log n})}$ bound.
 
-The upper bound is asymptotic. Its sample parameter and moment degree are chosen for a simple proof, and their constants are large. The finite checkers in the supplementary material exercise the geometric partition, exact moment identities, and sampling estimates. They are not an optimised implementation or a measurement of the asymptotic running time. Higher fixed dimensions require a different analysis, because sampled hulls can have superlinear face complexity.
+The upper bound is asymptotic. Its sample parameter and moment degree are chosen for a simple proof, and their constants are large. The finite checkers in the supplementary material exercise the geometric partition, exact moment identities, and sampling estimates. They use exact arithmetic on small inputs and do not measure running time. Higher fixed dimensions require a different analysis, because sampled hulls can have superlinear face complexity.
 
 \subsection*{Acknowledgements}
 GPT-6 Astra Pro and Claude Opus 5.5 assisted with the proofs, which the author checked line by line.
