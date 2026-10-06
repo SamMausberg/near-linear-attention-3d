@@ -5,11 +5,12 @@
 \hideLIPIcs
 \title{Near-Linear Attention in Three Dimensions}
 \titlerunning{Near-Linear Attention in Three Dimensions}
-\author{Samuel Mausberg}{Independent Researcher}{}{}{}
+\author{Samuel Mausberg}{Independent Researcher}{samuelmausberg@gmail.com}{}{}
 \authorrunning{S. Mausberg}
 \Copyright{Samuel Mausberg}
 \ccsdesc[500]{Theory of computation~Computational geometry}
 \keywords{softmax attention, random sampling, convex hulls, normal cones, range summation}
+\supplementdetails[linktext={github.com/SamMausberg/near-linear-attention-3d}]{Software}{https://github.com/SamMausberg/near-linear-attention-3d}
 \AtBeginDocument{\hypersetup{pdfsubject={Computational geometry},pdfauthor={Samuel Mausberg}}}
 \newcommand{\R}{\mathbb R}
 \newcommand{\Z}{\mathbb Z}
@@ -304,7 +305,7 @@ dominates the expected operation count for every $n\ge2$. Its integer counter ha
 \section{Scope and remaining questions}\label{sec:scope}
 The proof uses the linear face complexity of three-dimensional hulls twice: to bound expected facet conflicts and to bound the number of frames. A fan triangulation from one polar vertex can repeat a facet in many frames. Alternating ears prevents this duplication and gives the sharper $n\,2^{O(\sqrt{\log n})}$ bound.
 
-The upper bound is asymptotic. Its sample parameter and moment degree are chosen for a simple proof, and their constants are large. The accompanying finite checkers exercise the geometric partition, exact moment identities, and sampling estimates. They are not an optimised implementation or a measurement of the asymptotic running time. Higher fixed dimensions require a different analysis, because sampled hulls can have superlinear face complexity.
+The upper bound is asymptotic. Its sample parameter and moment degree are chosen for a simple proof, and their constants are large. The finite checkers in the supplementary material exercise the geometric partition, exact moment identities, and sampling estimates. They are not an optimised implementation or a measurement of the asymptotic running time. Higher fixed dimensions require a different analysis, because sampled hulls can have superlinear face complexity.
 
 \subsection*{Acknowledgements}
 GPT-6 Astra Pro and Claude Opus 5.5 assisted with the proofs, which the author checked line by line.
