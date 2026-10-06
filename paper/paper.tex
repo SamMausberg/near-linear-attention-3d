@@ -255,7 +255,7 @@ A union bound controls every heavy facet. For the sample size, the number $Z$ of
 $\Pr[Z\ge7s]\le \mathbb E[2^Z]/2^{7s}\le e^{2s}2^{-7s}\le e^{-2s}$.
 These bounds sum to less than $(n+2)^{-100}$.
 
-Each child is a union of three accepted conflict lists, so its size is at most $3p/(4r)<p/r$. Equation~\eqref{eq:copies} and Lemma~\ref{lem:conflicts} bound the expected child mass by $9\cdot32p$. Rejected nodes have no children, which only lowers this unconditional expectation. No conditioning on successful sampling is needed. Assigning each query to one frame makes its destination unique.
+Each child is a union of three accepted conflict lists, so its size is at most $3p/(4r)<p/r$. Since $p\pi\ge s\ge4$, Equation~\eqref{eq:copies} and Lemma~\ref{lem:conflicts} bound the expected child mass by $9\cdot32p$. Rejected nodes have no children, which only lowers this unconditional expectation. No conditioning on successful sampling is needed. Assigning each query to one frame makes its destination unique.
 \end{proof}
 
 \section{The algorithm and its proof}\label{sec:algorithm}
@@ -319,6 +319,8 @@ dominates the expected operation count for every $n\ge2$. Its integer counter ha
 The proof uses the linear face complexity of three-dimensional hulls twice: to bound expected facet conflicts and to bound the number of frames. A fan triangulation from one polar vertex can repeat a facet in many frames. Alternating ears prevent this duplication and keep the expected child mass at most $288p$.
 
 The upper bound is asymptotic. Its sample parameter and moment degree are chosen for a simple proof, and their constants are large. The finite checkers in the supplementary material exercise the geometric partition, exact moment identities, and sampling estimates. They use exact arithmetic on small inputs and do not measure running time. Higher fixed dimensions require a different analysis, because sampled hulls can have superlinear face complexity.
+
+The supplementary material also contains a Lean~4 formalization based on Mathlib. It proves Lemmas~\ref{lem:conflicts} and~\ref{lem:deferred}, the probability and size bounds of Lemma~\ref{lem:step}, and Lemmas~\ref{lem:preprocess}, \ref{lem:moments}, \ref{lem:frames}, and~\ref{lem:local} apart from their operation counts and bit lengths. Facts about the sampled hull enter as hypotheses: its incidences and Euler's formula, the description of its facets by defining triples and conflict lists, the cyclic convex position of the normals at each vertex, and the covering of all queries by vertex normal cones. The assembly of these lemmas in the proof of Theorem~\ref{thm:main} is not formalized.
 
 \subsection*{Acknowledgements}
 GPT-6 Astra Pro and Claude Opus 5.5 assisted with the proofs, which the author checked line by line.
