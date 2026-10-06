@@ -1,4 +1,21 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{support-basis}
+Maryam Aliakbarpour, Vladimir Braverman, Junze Yin, and Haochen Zhang.
+\newblock Support basis: Fast attention beyond bounded entries.
+\newblock In {\em Proceedings of the 29th International Conference on
+  Artificial Intelligence and Statistics}, volume 300 of {\em Proceedings of
+  Machine Learning Research}, pages 325--333. PMLR, 2026.
+\newblock URL: \url{https://proceedings.mlr.press/v300/aliakbarpour26a.html}.
+
+\bibitem{alman-chu}
+Josh Alman, Timothy Chu, Aaron Schild, and Zhao Song.
+\newblock Algorithms and hardness for linear algebra on geometric graphs.
+\newblock In {\em Proceedings of the 61st Annual IEEE Symposium on Foundations
+  of Computer Science}, pages 541--552, 2020.
+\newblock arXiv:2011.02466v1.
+\newblock \href {https://doi.org/10.1109/FOCS46700.2020.00057}
+  {\path{doi:10.1109/FOCS46700.2020.00057}}.
 
 \bibitem{alman-song}
 Josh Alman and Zhao Song.
@@ -19,12 +36,33 @@ Timothy~M. Chan and Da~Wei Zheng.
 \newblock \href {https://doi.org/10.1137/1.9781611977073.10}
   {\path{doi:10.1137/1.9781611977073.10}}.
 
+\bibitem{hsr}
+Bo~Chen, Yingyu Liang, Zhizhou Sha, Zhenmei Shi, and Zhao Song.
+\newblock {HSR}-enhanced sparse attention acceleration.
+\newblock In {\em Conference on Parsimony and Learning}, volume 280 of {\em
+  Proceedings of Machine Learning Research}, pages 105--133. PMLR, 2025.
+\newblock URL: \url{https://proceedings.mlr.press/v280/chen25a.html}.
+
 \bibitem{clarkson-shor}
 Kenneth~L. Clarkson and Peter~W. Shor.
 \newblock Applications of random sampling in computational geometry, {II}.
 \newblock {\em Discrete \& Computational Geometry}, 4:387--421, 1989.
 \newblock \href {https://doi.org/10.1007/BF02187740}
   {\path{doi:10.1007/BF02187740}}.
+
+\bibitem{louver}
+Mohsen Dehghankar and Abolfazl Asudeh.
+\newblock Sparse attention as a range searching problem: Towards an
+  inference-efficient index for {KV} cache, 2026.
+\newblock arXiv:2605.06763v2.
+\newblock URL: \url{https://arxiv.org/abs/2605.06763}.
+
+\bibitem{greengard-strain}
+Leslie Greengard and John Strain.
+\newblock The fast {Gauss} transform.
+\newblock {\em SIAM Journal on Scientific and Statistical Computing},
+  12(1):79--94, 1991.
+\newblock \href {https://doi.org/10.1137/0912004} {\path{doi:10.1137/0912004}}.
 
 \bibitem{gupta}
 Shreya Gupta, Boyang Huang, Barna Saha, Yinzhan Xu, and Christopher Ye.
@@ -35,6 +73,14 @@ Shreya Gupta, Boyang Huang, Barna Saha, Yinzhan Xu, and Christopher Ye.
 \newblock Earlier version: arXiv:2505.14840.
 \newblock URL:
   \url{https://proceedings.iclr.cc/paper_files/paper/2026/file/8a01099096c85890b1d1aff3c6b4ea56-Paper-Conference.pdf}.
+
+\bibitem{hyperattention}
+Insu Han, Rajesh Jayaram, Amin Karbasi, Vahab Mirrokni, David~P. Woodruff, and
+  Amir Zandieh.
+\newblock {HyperAttention}: Long-context attention in near-linear time.
+\newblock In {\em The Twelfth International Conference on Learning
+  Representations}, 2024.
+\newblock arXiv:2310.05869.
 
 \bibitem{haverbeck}
 Lukas Haverbeck, Carmen~Amo Alonso, Andres~Felipe Posada-Moreno, Sebastian
@@ -50,5 +96,13 @@ Tobias Schr{\"o}der and Lester Mackey.
   Learning}, volume 306 of {\em Proceedings of Machine Learning Research},
   pages 108454--108484. PMLR, 2026.
 \newblock URL: \url{https://proceedings.mlr.press/v306/schroder26a.html}.
+
+\bibitem{kdeformer}
+Amir Zandieh, Insu Han, Majid Daliri, and Amin Karbasi.
+\newblock {KDEformer}: Accelerating transformers via kernel density estimation.
+\newblock In {\em Proceedings of the 40th International Conference on Machine
+  Learning}, volume 202 of {\em Proceedings of Machine Learning Research},
+  pages 40605--40623. PMLR, 2023.
+\newblock URL: \url{https://proceedings.mlr.press/v202/zandieh23a.html}.
 
 \end{thebibliography}

@@ -18,7 +18,7 @@
 \ccsdesc[500]{Theory of computation~Computational geometry}
 \keywords{softmax attention, random sampling, convex hulls, normal cones, range summation}
 \supplementdetails[linktext={github.com/SamMausberg/near-linear-attention-3d}]{Software}{https://github.com/SamMausberg/near-linear-attention-3d}
-\AtBeginDocument{\hypersetup{pdfsubject={Computational geometry},pdfauthor={Samuel Mausberg}}}
+\AtBeginDocument{\hypersetup{pdfsubject={Computational geometry}}}
 \newcommand{\R}{\mathbb R}
 \newcommand{\Z}{\mathbb Z}
 \newcommand{\N}{\mathbb N}
@@ -34,7 +34,7 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-Given $n$ query vectors, $n$ key vectors, and scalar values, softmax attention returns one exponentially weighted average per query. We give an $n\,2^{O(\sqrt{\log n})}$-time randomised algorithm in three dimensions on a RAM with $O(\log n)$-bit words. Coordinates are logarithmic-bit rationals bounded by $n^{10}$, values lie in $[-1,1]$, and the simultaneous additive error is at most $n^{-10}$ with probability at least $2/3$. Thus the optimal word-RAM exponent is $\alpha(3)=1$. The algorithm builds small sampled hulls. Within a simplicial normal cone, keys satisfying its three facet inequalities have a nonnegative score-deficit formula; dyadic coefficient bins let many queries share their moment sums. The other keys recurse. A bounded-degree triangulation makes each sampled facet occur in at most nine frames, and the expected total facet-conflict size is linear. Queries follow single paths, whose recorded local maxima also recover the global maxima. All moment sums and polynomial reconstruction use exact integers. Without a time cutoff, every execution meets the error bound and the stated running time holds in expectation.
+Given $n$ query vectors, $n$ key vectors, and scalar values, softmax attention returns one exponentially weighted average per query. We give an $n\,2^{O(\sqrt{\log n})}$-time randomised algorithm in three dimensions on a RAM with $O(\log n)$-bit words. Coordinates are logarithmic-bit rationals bounded by $n^{10}$, values lie in $[-1,1]$, and the simultaneous additive error is at most $n^{-10}$ with probability at least $2/3$. Thus the optimal word-RAM exponent in three dimensions is $\alpha(3)=1$. The algorithm builds small sampled hulls. Within a simplicial normal cone, keys satisfying its three facet inequalities have a nonnegative score-deficit formula; dyadic coefficient bins let many queries share their moment sums. The other keys recurse. A bounded-degree triangulation makes each sampled facet occur in at most nine frames, and the expected total facet-conflict size is linear. Queries follow single paths, whose recorded local maxima also recover the global maxima. All moment sums and polynomial reconstruction use exact integers. Without a time cutoff, every execution meets the error bound and the stated running time holds in expectation.
 \end{abstract}
 
 \section{Introduction}\label{sec:intro}
@@ -72,14 +72,14 @@ Each row of~\eqref{eq:attention} is also a ratio of two weighted Gaussian sums, 
 \]
 In fixed dimension the fast Gauss transform~\cite{greengard-strain} approximates such sums to additive error $\eps$ in time $n\log^{O(d)}(\norm u_1/\eps)$, where $u$ is the weight vector~\cite[Theorem 2.1]{alman-chu}. With coordinates up to $n^{10}$, a weight $e^{\norm k^2/2}$ can exceed a row's denominator by a factor $e^{\Omega(n^{20})}$. The precision needed for our error bound then makes this logarithm polynomial in $n$. Our caps are defined relative to each row's maximum and avoid this problem.
 
-We use random samples of convex hulls, a classical setting for Clarkson--Shor analysis~\cite{clarkson-shor}. The conflict estimate we need is proved below with Bernoulli sampling and four fixed anchors. The additional ingredients are a triangulation with bounded facet use, nonnegative deficit coordinates within each frame, and a way to defer global support values until the recursion is finished. Together they permit the approximate cap summaries to be shared in near-linear total time.
+We use convex hulls of random samples, a classical setting for Clarkson--Shor analysis~\cite{clarkson-shor}. The conflict estimate we need is proved below with Bernoulli sampling and four fixed anchors. The additional ingredients are a triangulation with bounded facet use, nonnegative deficit coordinates within each frame, and a way to defer global support values until the recursion is finished. Together they permit the approximate cap summaries to be shared in near-linear total time.
 
-The nearly quadratic conditional attention lower bounds of Alman and Song~\cite[Theorem 1.3]{alman-song} use logarithmic dimension. Haverbeck et al.~\cite[Theorem 3.7]{haverbeck} extend hardness in that dimension to every fixed additive error below $1/2$. The stronger dimension reduction in~\cite[Theorem 1.4]{gupta} still has growing dimension. None fixes the dimension at three. Our bound concerns the stated finite-precision, fixed-dimensional problem; it does not assert a practical speedup for large-dimensional attention.
+The nearly quadratic conditional attention lower bounds of Alman and Song~\cite[Theorem 1.3]{alman-song} use logarithmic dimension. Haverbeck, Amo Alonso, Posada-Moreno, Trimpe, and Pavone~\cite[Theorem 3.7]{haverbeck} extend hardness in that dimension to every fixed additive error below $1/2$. The stronger dimension reduction in~\cite[Theorem 1.4]{gupta} still has growing dimension. None fixes the dimension at three. Our bound concerns the stated finite-precision, fixed-dimensional problem; it does not assert a practical speedup for high-dimensional attention.
 
 \paragraph*{How the geometry enters.}
 Let $H=\max_j\ip q{k_j}$. After subtracting $H$ from every score, the denominator in~\eqref{eq:attention} is at least one. Terms with deficit $H-\ip qk>T$, for $T=\Theta(\log n)$, have negligible total weight. The $T$-cap is the halfspace range $\{k:\ip qk\ge H-T\}$; for $q\ne0$, its width from the supporting plane is $T/\norm q$. It is enough to obtain exact moments on a set containing this cap and contained in the $7T$-cap.
 
-At a recursive node, build the hull of a small sample of the current keys. Triangulate each vertex normal cone. In one resulting frame, a query has the form $q=\sum_{a=1}^3\lambda_a f_a$, with $\lambda_a\ge0$ and $f_a$ the normals of incident sample facets. Keys satisfying all three facet inequalities have a nonnegative deficit relative to the sampled support vertex. Dyadic bins for the three coefficients give only polylogarithmically many local selected sets, whose moments can be computed by scans and reused.
+At a recursive node, build the hull of a small sample of the current keys. Triangulate each vertex normal cone. In one resulting frame, a query has the form $q=\sum_{a=1}^3\lambda_a f_a$, with $\lambda_a\ge0$ and $f_a$ the normals of incident sampled facets. Keys satisfying all three facet inequalities have a nonnegative deficit relative to the sampled support vertex. Dyadic bins for the three coefficients give only polylogarithmically many local selected sets, whose moments can be computed by scans and reused.
 
 Keys violating one of those inequalities pass to a child. A sampled facet is used by at most nine frames, so the total number of child-key memberships is controlled by the sampled hull's facet conflicts. Its expectation is linear in the current number of keys. Individual child lists shrink by a subpolynomial factor, while the query lists partition. The resulting recursion has $O(\sqrt{\log n})$ levels and near-linear expected work.
 
@@ -109,7 +109,7 @@ Let $H_i=\max_j\ip{q_i}{k_j}$ and $\Delta_{ij}=H_i-\ip{q_i}{k_j}$. Suppose $A_i$
  \{j:\Delta_{ij}\le T\}\subseteq A_i
        \subseteq\{j:\Delta_{ij}\le7T\}.
 \end{equation}
-The preprocessed-input attention can be recovered to error at most $n^{-10}/16$ from $H_i$ and the exact integer moments
+The preprocessed-input attention can be recovered to error at most $n^{-10}/16$ from $q_i$, $H_i$, and the exact integer moments
 \begin{equation}\label{eq:moments}
  \sum_{j\in A_i}\kappa_j^\alpha,\qquad
  \sum_{j\in A_i}\nu_j\kappa_j^\alpha,
@@ -140,7 +140,7 @@ For a query list $Q$, construction and assignment cost $(m+|Q|)\poly(m,L)$ word 
 \begin{proof}
 Triangulate each normal polygon by removing ears alternately from the two ends of its cyclic vertex list. Each polygon vertex occurs in at most three triangles: after reaching an end of the remaining list, it participates in at most one removal at the other end before its own removal. A sampled facet has three vertices. Its normal therefore occurs in at most $3\cdot3=9$ triangles over all normal polygons. The sum of the polygon sizes is three times the number of sampled facets, hence $O(m)$ by Euler's formula.
 
-Each triangle lies in a plane not containing zero, so its three normals are linearly independent. Its positive cone is a simplicial part of the vertex normal cone. Assign boundary queries to the first containing closed cone; zero may use any frame. Fixed-size rational linear systems give the coefficient and height bounds. One may construct the small hull by enumerating triples and testing their supporting sides, order incident facets by their shared edges, and test every frame for every query. Polynomial dependence on $m$ is sufficient here. Appendix~\ref{app:frames} gives further construction details.
+Each triangle has three distinct vertices of a convex polygon that lies in a plane not containing zero, so its three normals are linearly independent. Its positive cone is a simplicial part of the vertex normal cone. Assign boundary queries to the first containing closed cone; zero may use any frame. Fixed-size rational linear systems give the coefficient and height bounds. One may construct the small hull by enumerating triples and testing their supporting sides, order incident facets by their shared edges, and test every frame for every query. Polynomial dependence on $m$ is sufficient here. Appendix~\ref{app:frames} gives further construction details.
 \end{proof}
 
 For a frame $F=(v;f_1,f_2,f_3)$ define
@@ -159,7 +159,7 @@ Then
 Thus $h$ is the exact maximum over $G_F$, attained at $v$. Keys in $B_F$ may have higher scores; Section~\ref{sec:algorithm} recovers the global maximum after the recursion. The nonnegative summands allow coefficient rounding without cancellation.
 
 For every positive $\lambda_a$, choose its dyadic bin
-$b_a\le\lambda_a<2b_a$, where $b_a$ is a power of two. Zero is a separate bin. For the bin triple $b$ retain
+$b_a\le\lambda_a<2b_a$, where $b_a$ is a power of two. Zero is a separate bin. For the bin triple $b$ retain (see Figure~\ref{fig:localbox})
 \begin{equation}\label{eq:localset}
 A_{F,b}=\{k\in G_F:b_a z_a(k)\le T
                     \text{ whenever }\lambda_a>0\}.
@@ -221,7 +221,7 @@ Suppose every four keys of $K$ are affinely independent. Force four fixed keys i
 \]
 \end{lemma}
 \begin{proof}
-Consider an oriented triple whose inner halfspace contains the four anchors. Let $b\le3$ of its defining keys be unforced, and let $c$ keys lie strictly outside. It is a sample facet with probability $\pi^b(1-\pi)^c$. Triples with an exterior anchor have probability zero at either sampling rate. Comparing rates $\pi$ and $\pi/2$ gives
+Consider an oriented triple whose inner halfspace contains the four anchors. Let $b\le3$ of its defining keys be unforced, and let $c$ keys lie strictly outside. It is a sampled facet with probability $\pi^b(1-\pi)^c$. Triples with an exterior anchor have probability zero at either sampling rate. Comparing rates $\pi$ and $\pi/2$ gives
 \[
  \frac{c\,\pi^b(1-\pi)^c}{(\pi/2)^b(1-\pi/2)^c}
  \le8c e^{-\pi c/2}\le\frac{16}{\pi}.
@@ -255,18 +255,18 @@ A union bound controls every heavy facet. For the sample size, the number $Z$ of
 $\Pr[Z\ge7s]\le \mathbb E[2^Z]/2^{7s}\le e^{2s}2^{-7s}\le e^{-2s}$.
 These bounds sum to less than $(n+2)^{-100}$.
 
-Each child is a union of three accepted conflict lists, so its size is at most $3p/(4r)<p/r$. Equations~\eqref{eq:copies} and Lemma~\ref{lem:conflicts} bound the expected child mass by $9\cdot32p$. Rejected nodes have no children, which only lowers this unconditional expectation. No conditioning on successful sampling is needed. Assigning each query to one frame makes its destination unique.
+Each child is a union of three accepted conflict lists, so its size is at most $3p/(4r)<p/r$. Equation~\eqref{eq:copies} and Lemma~\ref{lem:conflicts} bound the expected child mass by $9\cdot32p$. Rejected nodes have no children, which only lowers this unconditional expectation. No conditioning on successful sampling is needed. Assigning each query to one frame makes its destination unique.
 \end{proof}
 
 \section{The algorithm and its proof}\label{sec:algorithm}
 Precompute each key's integer vector $(\kappa_j^\alpha,\nu_j\kappa_j^\alpha)_{|\alpha|\le g}$. A node owns a key list $K$ and a query list $Q$. A direct leaf computes, for each of its queries, the exact maximum $h$ over $K$ and the moments of $\{k\in K:h-\ip qk\le T\}$. It records this pair $(h,\text{moment vector})$ for the query.
 
-At an accepted node, construct the frames and assign the queries. For each occupied frame, compute the local bin summaries from Lemma~\ref{lem:local}. Each query records its $h=\ip qv$ and a reference to its bin's moment vector. Recurse on $B_F$ with the queries assigned to that frame, unless $B_F$ is empty. All bins of a frame share this one child. All checks precede recording contributions, so a fallback cannot add a contribution twice.
+At an accepted node, construct the frames and assign the queries (Figure~\ref{fig:recursion}). For each occupied frame, compute the local bin summaries from Lemma~\ref{lem:local}. Each query records its $h=\ip qv$ and a reference to its bin's moment vector. Recurse on $B_F$ with the queries assigned to that frame, unless $B_F$ is empty. All bins of a frame share this one child. All checks precede recording contributions, so a fallback cannot add a contribution twice.
 
 \begin{figure}[t]
 \centering
 \begin{tikzpicture}[font=\small,>=Stealth,
- box/.style={draw,align=center,text width=5.2cm,minimum height=.9cm}]
+ box/.style={draw,align=flush center,text width=5.2cm,minimum height=.9cm}]
 \node[box,text width=10.4cm] (root) at (0,0) {Sample the current keys $K$\\$O(s)$ frames partition the queries $Q$};
 \node[box] (good) at (-3.0,-1.65) {Compatible keys $G_F$\\store moments for each bin};
 \node[box] (bad) at (3.0,-1.65) {Remaining keys $B_F$\\recurse with this frame's queries};
@@ -278,7 +278,7 @@ At an accepted node, construct the frames and assign the queries. For each occup
 \end{tikzpicture}
 % Account for all text lines in the diagram, beyond the automatically counted caption.
 \addtocounter{linenumber}{10}
-\caption{At each node a query uses one frame. Its compatible keys contribute a summary; its remaining keys follow one recursive path. The recorded pieces are disjoint even though other queries may use different pieces.}
+\caption{At each node a query uses one frame. Its compatible keys contribute a summary; its remaining keys follow one recursive path. For each query the recorded pieces are disjoint. Other queries may use different pieces.}
 \label{fig:recursion}
 \end{figure}
 
@@ -297,12 +297,12 @@ Its record is kept, and it is selected by Lemma~\ref{lem:local} or the leaf rule
 \end{proof}
 
 \begin{proof}[Proof of Theorem~\ref{thm:main}]
-The two numerical lemmas and Lemma~\ref{lem:deferred} prove the error guarantee for every completed execution. It remains to bound the word operations, including unsuccessful checks.
+Lemmas~\ref{lem:preprocess}, \ref{lem:moments}, and~\ref{lem:deferred} prove the error guarantee for every completed execution. It remains to bound the word operations, including unsuccessful checks.
 
 All accepted children shrink their key lists by a factor greater than $r$, and rejected nodes stop. Thus every execution terminates within $d_0=1+\ceil{\log_r n}=O(\sqrt{\log n})$ levels. At every depth the query lists are disjoint, so their total size is at most $n$. Lemma~\ref{lem:step}, applied conditionally at each node, gives expected total key-list size at most $288^j n$ at depth $j$.
 
 The bounded sample, its hull and frames, all conflict tests, and the local summaries cost
-$(p+|Q|)\poly(s,\log n)$ at a node. A small direct leaf costs at most $4s|Q|\poly(\log n)$. At a larger node, direct inspection after a failed check adds at most $p|Q|\poly(\log n)$, with conditional probability at most $(n+2)^{-100}$. Its expected cost is bounded by $(n+2)^{-99}p\poly(\log n)$. Summing these bounds over depths yields
+$(p+|Q|)\poly(s,\log n)$ at a node. A small direct leaf costs at most $4s|Q|\poly(\log n)$. At a larger node, direct inspection after a failed check adds at most $p|Q|\poly(\log n)$, with conditional probability at most $(n+2)^{-100}$. Its expected cost is bounded by $(n+2)^{-99}p\poly(\log n)$. Preprocessing, the key monomial vectors, and each query's final sum and reconstruction cost $n(d_0+1)\poly(\log n)$ in total. Summing these bounds over depths yields
 \[
  n\,(d_0+1)\,288^{d_0}\poly(s,\log n)
        =n\,2^{O(\sqrt{\log n})}.
@@ -316,7 +316,7 @@ dominates the expected operation count for every $n\ge2$. Its integer counter ha
 \end{proof}
 
 \section{Scope and remaining questions}\label{sec:scope}
-The proof uses the linear face complexity of three-dimensional hulls twice: to bound expected facet conflicts and to bound the number of frames. A fan triangulation from one polar vertex can repeat a facet in many frames. Alternating ears prevents this duplication and gives the sharper $n\,2^{O(\sqrt{\log n})}$ bound.
+The proof uses the linear face complexity of three-dimensional hulls twice: to bound expected facet conflicts and to bound the number of frames. A fan triangulation from one polar vertex can repeat a facet in many frames. Alternating ears prevent this duplication and keep the expected child mass at most $288p$.
 
 The upper bound is asymptotic. Its sample parameter and moment degree are chosen for a simple proof, and their constants are large. The finite checkers in the supplementary material exercise the geometric partition, exact moment identities, and sampling estimates. They use exact arithmetic on small inputs and do not measure running time. Higher fixed dimensions require a different analysis, because sampled hulls can have superlinear face complexity.
 
@@ -377,7 +377,7 @@ The construction separates repeated original positions by their identities. It u
 
 \section{Exact reconstruction from integer moments}\label{app:numerics}
 \begin{proof}[Proof of Lemma~\ref{lem:moments}]
-Let $P_g(z)=\sum_{r=0}^g z^r/r!$. On $-7T\le z\le0$, Taylor's theorem gives a remainder at most $(7T)^{g+1}/(g+1)!$: the derivative at its intermediate point is at most one. Since $e<3$, $r!\ge(r/e)^r$, and $g=64T$,
+Let $P_g(z)=\sum_{r=0}^g z^r/r!$. On $-7T\le z\le0$, Taylor's theorem gives a remainder at most $(7T)^{g+1}/(g+1)!$: the $(g+1)$st derivative at its intermediate point is at most one. Since $e<3$, $r!\ge(r/e)^r$, and $g=64T$,
 \[
  |e^z-P_g(z)|
  \le\left(\frac{21T}{g+1}\right)^{g+1}
@@ -389,7 +389,7 @@ An omitted key also has exponential weight at most $e^{-T}\le2^{-T}$. For a fixe
  \widehat D=\sum_{j\in A}P_g(-\Delta_j),\quad
  \widehat N=\sum_{j\in A}P_g(-\Delta_j)v_j.
 \]
-The sandwich includes a maximiser, so $D_*\ge1$ and $|N_*|\le D_*$. Each of the two sums changes by at most $2n2^{-T}$. Hence $\widehat D>0$ and
+Subtracting $H$ from every score leaves~\eqref{eq:attention} unchanged, so $N_*/D_*$ is the attention output. A maximiser has $\Delta_j=0$, so $D_*\ge1$, and $|v_j|\le1$ gives $|N_*|\le D_*$. Each of the two sums changes by at most $2n2^{-T}$. Hence $\widehat D>0$ and
 \begin{equation}\label{eq:ratio}
  \left|\frac{\widehat N}{\widehat D}-\frac{N_*}{D_*}\right|
  \le\frac{4n2^{-T}}{1-2n2^{-T}}
@@ -433,12 +433,12 @@ At a nonterminal node the first four current keys are affinely independent by Le
 For each sampled triple, form its plane by a cross product and test all other sampled points. It is a facet precisely when they lie strictly on one side. Orient its normal $a$ outward, put $b=a\cdot(v-o)>0$ for a vertex $v$ of the triple, and store $f=a/b$. Vertex, edge, and facet incidences follow from the triples. Every facet is triangular, every edge is in two facets, and the facets incident to a vertex have a cyclic order given by sharing edges through that vertex.
 
 \paragraph*{Why the normal polygon covers the queries.}
-At a hull vertex $v$ the cone of its incident outward facet normals is its normal cone. One direct argument is as follows. This finitely generated cone is closed: its generators lie in the affine plane $f\cdot(v-o)=1$, so a bounded sequence in the cone has bounded conic coefficients. If a maximising query $q$ were outside it, project $q$ onto the closed cone. The displacement $d$ from that projection satisfies $f\cdot d\le0$ for every incident facet and $q\cdot d>0$. For sufficiently small $\eta>0$, $v+\eta d$ still satisfies the incident inequalities and all nonincident inequalities, which have positive slack at $v$. This contradicts maximality of $v$.
+At a hull vertex $v$ the cone of its incident outward facet normals is its normal cone. One direct argument is as follows. This finitely generated cone is closed: its generators lie in the affine plane $f\cdot(v-o)=1$, so a bounded sequence in the cone has bounded conic coefficients. If a query $q$ maximised at $v$ were outside it, project $q$ onto the closed cone. The displacement $d$ from that projection satisfies $f\cdot d\le0$ for every incident facet and $q\cdot d>0$. For sufficiently small $\eta>0$, $v+\eta d$ still satisfies the incident inequalities and all nonincident inequalities, which have positive slack at $v$. This contradicts maximality of $v$.
 
 Intersect this cone with $u\cdot(v-o)=1$. The result is the convex hull of the incident normal vectors. Every one is a vertex of that polygon: if one were a convex combination of the others, its facet inequality would be implied by the others, contradicting a point in the relative interior of that facet. The incident normals span $\R^3$, since otherwise $v\pm\eta d$ would both remain feasible for a small displacement orthogonal to them, contradicting that $v$ is a vertex. Thus the polygon is two-dimensional, and each of its triangles has three linearly independent vectors.
 
 \paragraph*{Bounded-degree triangulation.}
-For cyclic vertices $a_1,\ldots,a_h$, successively remove $a_1,a_h,a_2,a_{h-1},\ldots$, recording the ear at each removal, and include the final remaining triangle. Convexity makes every recorded triangle a valid ear. A vertex first appears when it or its neighbour becomes an end of the remaining chain; it then appears in at most the next opposite-end ear and its own ear. The two end vertices of the final triangle have the same bound. Thus every vertex appears in at most three triangles, also for $h=3$.
+For cyclic vertices $a_1,\ldots,a_h$, successively remove $a_1,a_h,a_2,a_{h-1},\ldots$, recording the ear at each removal, and include the final remaining triangle. Convexity makes every recorded triangle a valid ear. A vertex other than $a_1$ and $a_h$ first appears in the ear whose removal makes it an end of the remaining chain. After that it appears in at most the next ear at the opposite end and in its own ear. The two end vertices of the final triangle have the same bound. Thus every vertex appears in at most three triangles, also for $h=3$.
 
 The frames are precisely these triangles, with their primal vertex $v$. A triangular facet is incident to three vertices, so its normal is used at most nine times. This is a bound over all frames of the sample, including those that receive no queries.
 

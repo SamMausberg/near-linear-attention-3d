@@ -174,7 +174,9 @@
     \addtocounter{socglastlinecounter}{-1}%
     \makeatletter\write\@auxout{\noexpand\setcounter{socglastlinecounter}{\thesocglastlinecounter}}\makeatother%
     \socgthebibliography}%
-    }
+  \begin{textblock*}{.75\textwidth}(\oddsidemargin,28mm)
+    {\ifnum\value{socglastlinecounter}>500\color{red}\fi{\bfseries Lines:\enskip}\arabic{socglastlinecounter}\hfill}
+  \end{textblock*}}
 
 %% wrap tabular into edtable
 \ifthenelse{\boolean{socgnotab}}{%
