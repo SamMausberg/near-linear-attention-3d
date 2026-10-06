@@ -1,0 +1,525 @@
+{
+  "status": "passed",
+  "forbidden_tokens": [],
+  "build_returncode": 0,
+  "audited_theorems": 103,
+  "listed_theorems": 103,
+  "axioms": {
+    "Attention3D.Sampling.E_one": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Sampling.E_card_of_anchors": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Sampling.Pr_subset_disjoint": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Conflicts.rate_comparison": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Conflicts.expected_conflicts_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Conflicts.card_orientedTriples_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Conflicts.FivePoint.euler": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Conflicts.FivePoint.expected_conflicts": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Conflicts.heavy_config_prob_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Conflicts.sample_size_tail": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Conflicts.Pr_sample_too_big_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Conflicts.step_failure_prob_lt": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Conflicts.card_union_three_lt": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Conflicts.accepted_child_card_lt": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Conflicts.expected_child_mass_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Conflicts.checked_recursive_step": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Conflicts.MomentCurve.card_facets_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Conflicts.MomentCurve.checked_recursive_step_instance": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Triangulation.length_alternatingEars": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Triangulation.isEarSequence_alternatingEars": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Triangulation.alternatingEars_distinct": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Triangulation.useCount_alternatingEars_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Triangulation.alternatingEars_cons_append": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Triangulation.getElem_alternatingEars_even": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Triangulation.getElem_alternatingEars_odd": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Triangulation.getElem_alternatingEars_last": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Triangulation.IsEarSequence.cover": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Triangulation.exists_unique_coeffs_alternatingEars": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.FacetUse.SimplicialIncidence.card_frames_mem_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.FacetUse.SimplicialIncidence.sum_length_poly": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.FacetUse.SimplicialIncidence.card_frame_of_euler": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.FacetUse.SimplicialIncidence.sum_card_frameUnion_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.FacetUse.SimplicialIncidence.sum_card_bad_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.FacetUse.SimplicialIncidence.exists_frame_coeffs_of_cover": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.FacetUse.linearIndependent_of_affineIndependent": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.FacetUse.existsUnique_coeffs": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.FacetUse.octahedron_incidence": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.FacetUse.octahedron_convex": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.FacetUse.octahedron_cover": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.LocalCaps.Frame.deficit_eq_sum_slack": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.LocalCaps.Frame.deficit_nonneg": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.LocalCaps.Frame.isGreatest_good": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.LocalCaps.Frame.local_caps": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.LocalCaps.Frame.vertex_mem_localSet": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.LocalCaps.Frame.queryLocalSet_eq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.LocalCaps.Frame.queryLocalSet_shared": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.LocalCaps.exists_dyadic_bin": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.LocalCaps.inBin_unique": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Deferred.IsPath.partition": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Deferred.isGreatest_global": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Deferred.deferred_support": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Deferred.leafRecord_valid": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Correctness.frameRecord_valid": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Correctness.QueryPath.isPath": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Correctness.QueryPath.valid": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Correctness.query_correct": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Moments.abs_exp_sub_taylorPoly_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Moments.abs_exp_sub_taylorPoly_le_of_mem": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Moments.abs_exp_sub_taylorPoly_chain": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Moments.abs_exp_sub_taylorPoly_le_two_pow": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Moments.exp_neg_le_two_pow_neg": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Moments.coeffF_eq_sum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Moments.integer_identity": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Moments.abs_coeffF_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Moments.multinomialCoeff_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Moments.card_multiIdx": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Moments.ratio_perturbation": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Moments.ratio_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Moments.ratio_eq_attention": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Moments.moment_contraction": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Moments.abs_roundDyadic_sub_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Moments.two_pow_rounding_lt": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Moments.error_budget": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Moments.exists_int_rowMax": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Moments.reconstruct_congr": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Moments.moments_interface": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Moments.moments_interface_rowMax": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Softmax.hasDerivAt_softmaxProb": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Softmax.sum_abs_deriv_softmaxProb_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Softmax.abs_softmaxOut_sub_le_of_scores": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Softmax.abs_softmaxOut_sub_le_of_values": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Softmax.abs_softmaxOut_sub_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.GeneralPosition.affineDet_perturb": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.GeneralPosition.pencil_eq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.GeneralPosition.det3_momentDiffs_eq_det_vandermonde": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.GeneralPosition.abs_coeff_sum_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.GeneralPosition.coeff_inGrid": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.GeneralPosition.cubic_ne_zero_of_dominated": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.GeneralPosition.pencil_ne_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.GeneralPosition.affineDet_perturb_ne_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Preprocess.rounding_score_change": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Preprocess.rounding_output_change": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Preprocess.rounding_error_lt": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Preprocess.perturb_output_change": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Preprocess.perturb_error_lt": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Preprocess.momentCurve_inGrid": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Preprocess.domination_numeric": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Preprocess.perturbKey_affineDet_ne_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Preprocess.perturbKey_affineIndependent": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Preprocess.preprocess_error_lt": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Preprocess.gridD_exponent_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Preprocess.ell_eq_ceil_logb": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Attention3D.Preprocess.preprocess": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "non_standard": {}
+}
