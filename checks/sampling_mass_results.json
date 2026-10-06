@@ -1,0 +1,995 @@
+{
+  "scope": "Exact finite sampling and triangulation diagnostics; no fast implementation or proof-assistant certificate.",
+  "arithmetic": "Python integer and Fraction arithmetic",
+  "seed": 2026100603,
+  "instances": [
+    {
+      "name": "moment_curve_4",
+      "points": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          2,
+          4,
+          8
+        ],
+        [
+          3,
+          9,
+          27
+        ]
+      ],
+      "key_count": 4,
+      "max_sample_conflict_mass": 1,
+      "max_one_facet_conflict_full_dimension": 0,
+      "expectations": [
+        {
+          "rho": "1/16",
+          "expected_conflict_mass": "15/16384",
+          "expected_half_sample_facets": "63/262144",
+          "expected_conflict_mass_over_n": "15/65536"
+        },
+        {
+          "rho": "1/8",
+          "expected_conflict_mass": "7/1024",
+          "expected_half_sample_facets": "31/16384",
+          "expected_conflict_mass_over_n": "7/4096"
+        },
+        {
+          "rho": "1/4",
+          "expected_conflict_mass": "3/64",
+          "expected_half_sample_facets": "15/1024",
+          "expected_conflict_mass_over_n": "3/256"
+        },
+        {
+          "rho": "1/3",
+          "expected_conflict_mass": "8/81",
+          "expected_half_sample_facets": "11/324",
+          "expected_conflict_mass_over_n": "2/81"
+        },
+        {
+          "rho": "1/2",
+          "expected_conflict_mass": "1/4",
+          "expected_half_sample_facets": "7/64",
+          "expected_conflict_mass_over_n": "1/16"
+        },
+        {
+          "rho": "2/3",
+          "expected_conflict_mass": "32/81",
+          "expected_half_sample_facets": "20/81",
+          "expected_conflict_mass_over_n": "8/81"
+        },
+        {
+          "rho": "3/4",
+          "expected_conflict_mass": "27/64",
+          "expected_half_sample_facets": "351/1024",
+          "expected_conflict_mass_over_n": "27/256"
+        },
+        {
+          "rho": "7/8",
+          "expected_conflict_mass": "343/1024",
+          "expected_half_sample_facets": "8575/16384",
+          "expected_conflict_mass_over_n": "343/4096"
+        }
+      ],
+      "forced_anchor_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "forced_max_sample_conflict_mass": 0,
+      "forced_expectations": [
+        {
+          "rho": "1/16",
+          "expected_conflict_mass": "0",
+          "expected_half_sample_facets": "4",
+          "expected_conflict_mass_over_n": "0",
+          "linear_bound_32_n_applies": false
+        },
+        {
+          "rho": "1/8",
+          "expected_conflict_mass": "0",
+          "expected_half_sample_facets": "4",
+          "expected_conflict_mass_over_n": "0",
+          "linear_bound_32_n_applies": false
+        },
+        {
+          "rho": "1/4",
+          "expected_conflict_mass": "0",
+          "expected_half_sample_facets": "4",
+          "expected_conflict_mass_over_n": "0",
+          "linear_bound_32_n_applies": false
+        },
+        {
+          "rho": "1/3",
+          "expected_conflict_mass": "0",
+          "expected_half_sample_facets": "4",
+          "expected_conflict_mass_over_n": "0",
+          "linear_bound_32_n_applies": false
+        },
+        {
+          "rho": "1/2",
+          "expected_conflict_mass": "0",
+          "expected_half_sample_facets": "4",
+          "expected_conflict_mass_over_n": "0",
+          "linear_bound_32_n_applies": false
+        },
+        {
+          "rho": "2/3",
+          "expected_conflict_mass": "0",
+          "expected_half_sample_facets": "4",
+          "expected_conflict_mass_over_n": "0",
+          "linear_bound_32_n_applies": false
+        },
+        {
+          "rho": "3/4",
+          "expected_conflict_mass": "0",
+          "expected_half_sample_facets": "4",
+          "expected_conflict_mass_over_n": "0",
+          "linear_bound_32_n_applies": false
+        },
+        {
+          "rho": "7/8",
+          "expected_conflict_mass": "0",
+          "expected_half_sample_facets": "4",
+          "expected_conflict_mass_over_n": "0",
+          "linear_bound_32_n_applies": false
+        }
+      ]
+    },
+    {
+      "name": "moment_curve_7",
+      "points": [
+        [
+          -3,
+          9,
+          -27
+        ],
+        [
+          -2,
+          4,
+          -8
+        ],
+        [
+          -1,
+          1,
+          -1
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          2,
+          4,
+          8
+        ],
+        [
+          3,
+          9,
+          27
+        ]
+      ],
+      "key_count": 7,
+      "max_sample_conflict_mass": 6,
+      "max_one_facet_conflict_full_dimension": 3,
+      "expectations": [
+        {
+          "rho": "1/16",
+          "expected_conflict_mass": "959205/33554432",
+          "expected_half_sample_facets": "34470021/17179869184",
+          "expected_conflict_mass_over_n": "959205/234881024"
+        },
+        {
+          "rho": "1/8",
+          "expected_conflict_mass": "49749/262144",
+          "expected_half_sample_facets": "2022725/134217728",
+          "expected_conflict_mass_over_n": "7107/262144"
+        },
+        {
+          "rho": "1/4",
+          "expected_conflict_mass": "2085/2048",
+          "expected_half_sample_facets": "111333/1048576",
+          "expected_conflict_mass_over_n": "2085/14336"
+        },
+        {
+          "rho": "1/3",
+          "expected_conflict_mass": "3952/2187",
+          "expected_half_sample_facets": "32345/139968",
+          "expected_conflict_mass_over_n": "3952/15309"
+        },
+        {
+          "rho": "1/2",
+          "expected_conflict_mass": "51/16",
+          "expected_half_sample_facets": "5381/8192",
+          "expected_conflict_mass_over_n": "51/112"
+        },
+        {
+          "rho": "2/3",
+          "expected_conflict_mass": "7520/2187",
+          "expected_half_sample_facets": "2866/2187",
+          "expected_conflict_mass_over_n": "7520/15309"
+        },
+        {
+          "rho": "3/4",
+          "expected_conflict_mass": "6183/2048",
+          "expected_half_sample_facets": "1795095/1048576",
+          "expected_conflict_mass_over_n": "6183/14336"
+        },
+        {
+          "rho": "7/8",
+          "expected_conflict_mass": "468195/262144",
+          "expected_half_sample_facets": "320819219/134217728",
+          "expected_conflict_mass_over_n": "66885/262144"
+        }
+      ],
+      "forced_anchor_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "forced_max_sample_conflict_mass": 6,
+      "forced_expectations": [
+        {
+          "rho": "1/16",
+          "expected_conflict_mass": "23055/4096",
+          "expected_half_sample_facets": "67/16",
+          "expected_conflict_mass_over_n": "23055/28672",
+          "linear_bound_32_n_applies": false
+        },
+        {
+          "rho": "1/8",
+          "expected_conflict_mass": "2695/512",
+          "expected_half_sample_facets": "35/8",
+          "expected_conflict_mass_over_n": "385/512",
+          "linear_bound_32_n_applies": false
+        },
+        {
+          "rho": "1/4",
+          "expected_conflict_mass": "291/64",
+          "expected_half_sample_facets": "19/4",
+          "expected_conflict_mass_over_n": "291/448",
+          "linear_bound_32_n_applies": false
+        },
+        {
+          "rho": "1/3",
+          "expected_conflict_mass": "110/27",
+          "expected_half_sample_facets": "5",
+          "expected_conflict_mass_over_n": "110/189",
+          "linear_bound_32_n_applies": false
+        },
+        {
+          "rho": "1/2",
+          "expected_conflict_mass": "25/8",
+          "expected_half_sample_facets": "11/2",
+          "expected_conflict_mass_over_n": "25/56",
+          "linear_bound_32_n_applies": false
+        },
+        {
+          "rho": "2/3",
+          "expected_conflict_mass": "58/27",
+          "expected_half_sample_facets": "6",
+          "expected_conflict_mass_over_n": "58/189",
+          "linear_bound_32_n_applies": true
+        },
+        {
+          "rho": "3/4",
+          "expected_conflict_mass": "105/64",
+          "expected_half_sample_facets": "25/4",
+          "expected_conflict_mass_over_n": "15/64",
+          "linear_bound_32_n_applies": true
+        },
+        {
+          "rho": "7/8",
+          "expected_conflict_mass": "433/512",
+          "expected_half_sample_facets": "53/8",
+          "expected_conflict_mass_over_n": "433/3584",
+          "linear_bound_32_n_applies": true
+        }
+      ]
+    },
+    {
+      "name": "moment_curve_10",
+      "points": [
+        [
+          -5,
+          25,
+          -125
+        ],
+        [
+          -4,
+          16,
+          -64
+        ],
+        [
+          -3,
+          9,
+          -27
+        ],
+        [
+          -2,
+          4,
+          -8
+        ],
+        [
+          -1,
+          1,
+          -1
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          2,
+          4,
+          8
+        ],
+        [
+          3,
+          9,
+          27
+        ],
+        [
+          4,
+          16,
+          64
+        ]
+      ],
+      "key_count": 10,
+      "max_sample_conflict_mass": 16,
+      "max_one_facet_conflict_full_dimension": 6,
+      "expectations": [
+        {
+          "rho": "1/16",
+          "expected_conflict_mass": "10531205745/68719476736",
+          "expected_half_sample_facets": "462087846423/70368744177664",
+          "expected_conflict_mass_over_n": "2106241149/137438953472"
+        },
+        {
+          "rho": "1/8",
+          "expected_conflict_mass": "61015045/67108864",
+          "expected_half_sample_facets": "3238235851/68719476736",
+          "expected_conflict_mass_over_n": "12203009/134217728"
+        },
+        {
+          "rho": "1/4",
+          "expected_conflict_mass": "256323/65536",
+          "expected_half_sample_facets": "20397525/67108864",
+          "expected_conflict_mass_over_n": "256323/655360"
+        },
+        {
+          "rho": "1/3",
+          "expected_conflict_mass": "356120/59049",
+          "expected_half_sample_facets": "4726777/7558272",
+          "expected_conflict_mass_over_n": "35612/59049"
+        },
+        {
+          "rho": "1/2",
+          "expected_conflict_mass": "529/64",
+          "expected_half_sample_facets": "52451/32768",
+          "expected_conflict_mass_over_n": "529/640"
+        },
+        {
+          "rho": "2/3",
+          "expected_conflict_mass": "433472/59049",
+          "expected_half_sample_facets": "171800/59049",
+          "expected_conflict_mass_over_n": "216736/295245"
+        },
+        {
+          "rho": "3/4",
+          "expected_conflict_mass": "393255/65536",
+          "expected_half_sample_facets": "244646649/67108864",
+          "expected_conflict_mass_over_n": "78651/131072"
+        },
+        {
+          "rho": "7/8",
+          "expected_conflict_mass": "220500637/67108864",
+          "expected_half_sample_facets": "330679139875/68719476736",
+          "expected_conflict_mass_over_n": "220500637/671088640"
+        }
+      ],
+      "forced_anchor_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "forced_max_sample_conflict_mass": 16,
+      "forced_expectations": [
+        {
+          "rho": "1/16",
+          "expected_conflict_mass": "47465385/4194304",
+          "expected_half_sample_facets": "35/8",
+          "expected_conflict_mass_over_n": "9493077/8388608",
+          "linear_bound_32_n_applies": false
+        },
+        {
+          "rho": "1/8",
+          "expected_conflict_mass": "702933/65536",
+          "expected_half_sample_facets": "19/4",
+          "expected_conflict_mass_over_n": "702933/655360",
+          "linear_bound_32_n_applies": false
+        },
+        {
+          "rho": "1/4",
+          "expected_conflict_mass": "9867/1024",
+          "expected_half_sample_facets": "11/2",
+          "expected_conflict_mass_over_n": "9867/10240",
+          "linear_bound_32_n_applies": false
+        },
+        {
+          "rho": "1/3",
+          "expected_conflict_mass": "6472/729",
+          "expected_half_sample_facets": "6",
+          "expected_conflict_mass_over_n": "3236/3645",
+          "linear_bound_32_n_applies": false
+        },
+        {
+          "rho": "1/2",
+          "expected_conflict_mass": "57/8",
+          "expected_half_sample_facets": "7",
+          "expected_conflict_mass_over_n": "57/80",
+          "linear_bound_32_n_applies": true
+        },
+        {
+          "rho": "2/3",
+          "expected_conflict_mass": "3652/729",
+          "expected_half_sample_facets": "8",
+          "expected_conflict_mass_over_n": "1826/3645",
+          "linear_bound_32_n_applies": true
+        },
+        {
+          "rho": "3/4",
+          "expected_conflict_mass": "3927/1024",
+          "expected_half_sample_facets": "17/2",
+          "expected_conflict_mass_over_n": "3927/10240",
+          "linear_bound_32_n_applies": true
+        },
+        {
+          "rho": "7/8",
+          "expected_conflict_mass": "128733/65536",
+          "expected_half_sample_facets": "37/4",
+          "expected_conflict_mass_over_n": "128733/655360",
+          "linear_bound_32_n_applies": true
+        }
+      ]
+    },
+    {
+      "name": "random_generic_8",
+      "points": [
+        [
+          -24,
+          25,
+          1
+        ],
+        [
+          18,
+          18,
+          -8
+        ],
+        [
+          17,
+          -14,
+          -28
+        ],
+        [
+          -28,
+          -16,
+          5
+        ],
+        [
+          28,
+          30,
+          22
+        ],
+        [
+          24,
+          -13,
+          -16
+        ],
+        [
+          5,
+          27,
+          -29
+        ],
+        [
+          -11,
+          22,
+          10
+        ]
+      ],
+      "key_count": 8,
+      "max_sample_conflict_mass": 9,
+      "max_one_facet_conflict_full_dimension": 4,
+      "expectations": [
+        {
+          "rho": "1/16",
+          "expected_conflict_mass": "59117025/1073741824",
+          "expected_half_sample_facets": "868819581/274877906944",
+          "expected_conflict_mass_over_n": "59117025/8589934592"
+        },
+        {
+          "rho": "1/8",
+          "expected_conflict_mass": "1475817/4194304",
+          "expected_half_sample_facets": "25102653/1073741824",
+          "expected_conflict_mass_over_n": "1475817/33554432"
+        },
+        {
+          "rho": "1/4",
+          "expected_conflict_mass": "28653/16384",
+          "expected_half_sample_facets": "670365/4194304",
+          "expected_conflict_mass_over_n": "28653/131072"
+        },
+        {
+          "rho": "1/3",
+          "expected_conflict_mass": "2152/729",
+          "expected_half_sample_facets": "15917/46656",
+          "expected_conflict_mass_over_n": "269/729"
+        },
+        {
+          "rho": "1/2",
+          "expected_conflict_mass": "303/64",
+          "expected_half_sample_facets": "15309/16384",
+          "expected_conflict_mass_over_n": "303/512"
+        },
+        {
+          "rho": "2/3",
+          "expected_conflict_mass": "10304/2187",
+          "expected_half_sample_facets": "3940/2187",
+          "expected_conflict_mass_over_n": "1288/2187"
+        },
+        {
+          "rho": "3/4",
+          "expected_conflict_mass": "65637/16384",
+          "expected_half_sample_facets": "9716733/4194304",
+          "expected_conflict_mass_over_n": "65637/131072"
+        },
+        {
+          "rho": "7/8",
+          "expected_conflict_mass": "9587193/4194304",
+          "expected_half_sample_facets": "3398195325/1073741824",
+          "expected_conflict_mass_over_n": "9587193/33554432"
+        }
+      ],
+      "forced_anchor_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "forced_max_sample_conflict_mass": 8,
+      "forced_expectations": [
+        {
+          "rho": "1/16",
+          "expected_conflict_mass": "6345/1024",
+          "expected_half_sample_facets": "17/4",
+          "expected_conflict_mass_over_n": "6345/8192",
+          "linear_bound_32_n_applies": false
+        },
+        {
+          "rho": "1/8",
+          "expected_conflict_mass": "805/128",
+          "expected_half_sample_facets": "9/2",
+          "expected_conflict_mass_over_n": "805/1024",
+          "linear_bound_32_n_applies": false
+        },
+        {
+          "rho": "1/4",
+          "expected_conflict_mass": "99/16",
+          "expected_half_sample_facets": "5",
+          "expected_conflict_mass_over_n": "99/128",
+          "linear_bound_32_n_applies": false
+        },
+        {
+          "rho": "1/3",
+          "expected_conflict_mass": "160/27",
+          "expected_half_sample_facets": "16/3",
+          "expected_conflict_mass_over_n": "20/27",
+          "linear_bound_32_n_applies": false
+        },
+        {
+          "rho": "1/2",
+          "expected_conflict_mass": "5",
+          "expected_half_sample_facets": "6",
+          "expected_conflict_mass_over_n": "5/8",
+          "linear_bound_32_n_applies": true
+        },
+        {
+          "rho": "2/3",
+          "expected_conflict_mass": "98/27",
+          "expected_half_sample_facets": "20/3",
+          "expected_conflict_mass_over_n": "49/108",
+          "linear_bound_32_n_applies": true
+        },
+        {
+          "rho": "3/4",
+          "expected_conflict_mass": "45/16",
+          "expected_half_sample_facets": "7",
+          "expected_conflict_mass_over_n": "45/128",
+          "linear_bound_32_n_applies": true
+        },
+        {
+          "rho": "7/8",
+          "expected_conflict_mass": "187/128",
+          "expected_half_sample_facets": "15/2",
+          "expected_conflict_mass_over_n": "187/1024",
+          "linear_bound_32_n_applies": true
+        }
+      ]
+    },
+    {
+      "name": "random_generic_9",
+      "points": [
+        [
+          15,
+          -26,
+          -10
+        ],
+        [
+          -25,
+          -11,
+          -15
+        ],
+        [
+          22,
+          -13,
+          0
+        ],
+        [
+          11,
+          14,
+          -30
+        ],
+        [
+          18,
+          -12,
+          18
+        ],
+        [
+          -5,
+          10,
+          3
+        ],
+        [
+          -2,
+          6,
+          16
+        ],
+        [
+          -22,
+          -16,
+          -30
+        ],
+        [
+          -4,
+          -14,
+          15
+        ]
+      ],
+      "key_count": 9,
+      "max_sample_conflict_mass": 12,
+      "max_one_facet_conflict_full_dimension": 5,
+      "expectations": [
+        {
+          "rho": "1/16",
+          "expected_conflict_mass": "1639834965/17179869184",
+          "expected_half_sample_facets": "82124130631/17592186044416",
+          "expected_conflict_mass_over_n": "182203885/17179869184"
+        },
+        {
+          "rho": "1/8",
+          "expected_conflict_mass": "19715829/33554432",
+          "expected_half_sample_facets": "1168486567/34359738368",
+          "expected_conflict_mass_over_n": "6571943/100663296"
+        },
+        {
+          "rho": "1/4",
+          "expected_conflict_mass": "177813/65536",
+          "expected_half_sample_facets": "15149911/67108864",
+          "expected_conflict_mass_over_n": "19757/65536"
+        },
+        {
+          "rho": "1/3",
+          "expected_conflict_mass": "28672/6561",
+          "expected_half_sample_facets": "2383027/5038848",
+          "expected_conflict_mass_over_n": "28672/59049"
+        },
+        {
+          "rho": "1/2",
+          "expected_conflict_mass": "825/128",
+          "expected_half_sample_facets": "163951/131072",
+          "expected_conflict_mass_over_n": "275/384"
+        },
+        {
+          "rho": "2/3",
+          "expected_conflict_mass": "39488/6561",
+          "expected_half_sample_facets": "46022/19683",
+          "expected_conflict_mass_over_n": "39488/59049"
+        },
+        {
+          "rho": "3/4",
+          "expected_conflict_mass": "327807/65536",
+          "expected_half_sample_facets": "199002501/67108864",
+          "expected_conflict_mass_over_n": "36423/65536"
+        },
+        {
+          "rho": "7/8",
+          "expected_conflict_mass": "93473331/33554432",
+          "expected_half_sample_facets": "136630770577/34359738368",
+          "expected_conflict_mass_over_n": "31157777/100663296"
+        }
+      ],
+      "forced_anchor_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "forced_max_sample_conflict_mass": 9,
+      "forced_expectations": [
+        {
+          "rho": "1/16",
+          "expected_conflict_mass": "31905/4096",
+          "expected_half_sample_facets": "69/16",
+          "expected_conflict_mass_over_n": "3545/4096",
+          "linear_bound_32_n_applies": false
+        },
+        {
+          "rho": "1/8",
+          "expected_conflict_mass": "3857/512",
+          "expected_half_sample_facets": "37/8",
+          "expected_conflict_mass_over_n": "3857/4608",
+          "linear_bound_32_n_applies": false
+        },
+        {
+          "rho": "1/4",
+          "expected_conflict_mass": "441/64",
+          "expected_half_sample_facets": "21/4",
+          "expected_conflict_mass_over_n": "49/64",
+          "linear_bound_32_n_applies": false
+        },
+        {
+          "rho": "1/3",
+          "expected_conflict_mass": "172/27",
+          "expected_half_sample_facets": "17/3",
+          "expected_conflict_mass_over_n": "172/243",
+          "linear_bound_32_n_applies": false
+        },
+        {
+          "rho": "1/2",
+          "expected_conflict_mass": "41/8",
+          "expected_half_sample_facets": "13/2",
+          "expected_conflict_mass_over_n": "41/72",
+          "linear_bound_32_n_applies": true
+        },
+        {
+          "rho": "2/3",
+          "expected_conflict_mass": "98/27",
+          "expected_half_sample_facets": "22/3",
+          "expected_conflict_mass_over_n": "98/243",
+          "linear_bound_32_n_applies": true
+        },
+        {
+          "rho": "3/4",
+          "expected_conflict_mass": "179/64",
+          "expected_half_sample_facets": "31/4",
+          "expected_conflict_mass_over_n": "179/576",
+          "linear_bound_32_n_applies": true
+        },
+        {
+          "rho": "7/8",
+          "expected_conflict_mass": "743/512",
+          "expected_half_sample_facets": "67/8",
+          "expected_conflict_mass_over_n": "743/4608",
+          "linear_bound_32_n_applies": true
+        }
+      ]
+    },
+    {
+      "name": "random_generic_10",
+      "points": [
+        [
+          26,
+          -28,
+          -25
+        ],
+        [
+          3,
+          -21,
+          27
+        ],
+        [
+          -1,
+          7,
+          9
+        ],
+        [
+          10,
+          0,
+          30
+        ],
+        [
+          -10,
+          27,
+          16
+        ],
+        [
+          -5,
+          13,
+          20
+        ],
+        [
+          1,
+          11,
+          23
+        ],
+        [
+          -6,
+          23,
+          -2
+        ],
+        [
+          -23,
+          -20,
+          -24
+        ],
+        [
+          -28,
+          10,
+          -29
+        ]
+      ],
+      "key_count": 10,
+      "max_sample_conflict_mass": 22,
+      "max_one_facet_conflict_full_dimension": 6,
+      "expectations": [
+        {
+          "rho": "1/16",
+          "expected_conflict_mass": "42495716235/274877906944",
+          "expected_half_sample_facets": "1847886071661/281474976710656",
+          "expected_conflict_mass_over_n": "8499143247/549755813888"
+        },
+        {
+          "rho": "1/8",
+          "expected_conflict_mass": "248252347/268435456",
+          "expected_half_sample_facets": "12939510453/274877906944",
+          "expected_conflict_mass_over_n": "248252347/2684354560"
+        },
+        {
+          "rho": "1/4",
+          "expected_conflict_mass": "1057299/262144",
+          "expected_half_sample_facets": "81232665/268435456",
+          "expected_conflict_mass_over_n": "1057299/2621440"
+        },
+        {
+          "rho": "1/3",
+          "expected_conflict_mass": "123116/19683",
+          "expected_half_sample_facets": "173657/279936",
+          "expected_conflict_mass_over_n": "61558/98415"
+        },
+        {
+          "rho": "1/2",
+          "expected_conflict_mass": "2191/256",
+          "expected_half_sample_facets": "411579/262144",
+          "expected_conflict_mass_over_n": "2191/2560"
+        },
+        {
+          "rho": "2/3",
+          "expected_conflict_mass": "146048/19683",
+          "expected_half_sample_facets": "55240/19683",
+          "expected_conflict_mass_over_n": "73024/98415"
+        },
+        {
+          "rho": "3/4",
+          "expected_conflict_mass": "1558683/262144",
+          "expected_half_sample_facets": "934167897/268435456",
+          "expected_conflict_mass_over_n": "1558683/2621440"
+        },
+        {
+          "rho": "7/8",
+          "expected_conflict_mass": "844410091/268435456",
+          "expected_half_sample_facets": "1240055951925/274877906944",
+          "expected_conflict_mass_over_n": "844410091/2684354560"
+        }
+      ],
+      "forced_anchor_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "forced_max_sample_conflict_mass": 16,
+      "forced_expectations": [
+        {
+          "rho": "1/16",
+          "expected_conflict_mass": "188934495/16777216",
+          "expected_half_sample_facets": "2258015/524288",
+          "expected_conflict_mass_over_n": "37786899/33554432",
+          "linear_bound_32_n_applies": false
+        },
+        {
+          "rho": "1/8",
+          "expected_conflict_mass": "2939503/262144",
+          "expected_half_sample_facets": "150831/32768",
+          "expected_conflict_mass_over_n": "2939503/2621440",
+          "linear_bound_32_n_applies": false
+        },
+        {
+          "rho": "1/4",
+          "expected_conflict_mass": "42663/4096",
+          "expected_half_sample_facets": "10583/2048",
+          "expected_conflict_mass_over_n": "42663/40960",
+          "linear_bound_32_n_applies": false
+        },
+        {
+          "rho": "1/3",
+          "expected_conflict_mass": "6938/729",
+          "expected_half_sample_facets": "3581/648",
+          "expected_conflict_mass_over_n": "3469/3645",
+          "linear_bound_32_n_applies": false
+        },
+        {
+          "rho": "1/2",
+          "expected_conflict_mass": "463/64",
+          "expected_half_sample_facets": "795/128",
+          "expected_conflict_mass_over_n": "463/640",
+          "linear_bound_32_n_applies": true
+        },
+        {
+          "rho": "2/3",
+          "expected_conflict_mass": "3437/729",
+          "expected_half_sample_facets": "556/81",
+          "expected_conflict_mass_over_n": "3437/7290",
+          "linear_bound_32_n_applies": true
+        },
+        {
+          "rho": "3/4",
+          "expected_conflict_mass": "14207/4096",
+          "expected_half_sample_facets": "14711/2048",
+          "expected_conflict_mass_over_n": "14207/40960",
+          "linear_bound_32_n_applies": true
+        },
+        {
+          "rho": "7/8",
+          "expected_conflict_mass": "439807/262144",
+          "expected_half_sample_facets": "250863/32768",
+          "expected_conflict_mass_over_n": "439807/2621440",
+          "linear_bound_32_n_applies": true
+        }
+      ]
+    }
+  ],
+  "subset_count": 2960,
+  "forced_anchor_subset_count": 185,
+  "expectation_comparisons": 48,
+  "candidate_probability_comparisons": 48,
+  "forced_anchor_expectation_comparisons": 48,
+  "forced_anchor_candidate_probability_comparisons": 48,
+  "forced_anchor_linear_bounds_when_n_rho_at_least_4": 19,
+  "pointwise_comparison_checks": 18504,
+  "zigzag_polygon_sizes": 998,
+  "status": "PASS"
+}

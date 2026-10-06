@@ -1,0 +1,8 @@
+formalization/.lake/
+paper/build.log
+paper/*.aux
+paper/*.blg
+paper/*.log
+paper/*.out
+paper/*.vtc
+__pycache__/
