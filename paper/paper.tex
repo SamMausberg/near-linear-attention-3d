@@ -2,6 +2,13 @@
 \usepackage{mathtools,booktabs}
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta,positioning,calc}
+% Break URLs and DOIs only after a single slash or similar separator: never at a dot,
+% after "https:", or between the two slashes of "//".
+\def\UrlSlash{\futurelet\UrlNext\UrlSlashTest}
+\def\UrlSlashTest{\ifx\UrlNext/\mathchar"002F \else\mathchar"202F \fi}
+\AtBeginDocument{\def\UrlBreaks{\do\_\do\?\do\&\do\=\do\#}\def\UrlBigBreaks{}%
+  \def\UrlOrds{\do\*\do\-\do\~\do\'\do\"\do\:}%
+  \expandafter\def\expandafter\UrlSpecials\expandafter{\UrlSpecials\do\/{\UrlSlash}}}
 \hideLIPIcs
 \title{Near-Linear Attention in Three Dimensions}
 \titlerunning{Near-Linear Attention in Three Dimensions}
